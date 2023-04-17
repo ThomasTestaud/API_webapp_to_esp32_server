@@ -19,7 +19,26 @@ if (array_key_exists('route', $_GET)) {
             break;
 
         case 'api':
-            echo ('api');
+
+            $content = file_get_contents("php://input");
+            $data = json_decode($content, true);
+
+            //Escape double quotes
+            $code = str_replace('"', '\\"', $data['codeToConvert']);
+
+            //Delete new lines
+            $code = str_replace("\n", "", $code);
+
+            //Remove extra spaces
+            $code = trim(preg_replace('/\s+/', ' ', $code));
+            $code = htmlspecialchars($code);
+
+            $code = str_split($code, 200);
+
+            foreach ($code as $print) {
+                echo 'client.println("' . $print . '");<br>';
+            }
+
             break;
     }
 } else {

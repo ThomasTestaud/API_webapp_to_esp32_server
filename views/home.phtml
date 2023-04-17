@@ -1,13 +1,15 @@
 <div class="container">
     <div id="input">
-        <form method="post" id="dnt-form">
-            <textarea name="textarea-input" id="textarea-input"></textarea>
-            <input type="submit" value="Convert code">
-        </form>
+        <h2>Input code</h2>
+        <textarea name="textarea-input" id="textarea-input"></textarea>
     </div>
+    <button id="convert-btn">Convert code</button>
 
     <div id="output">
-        <textarea name="textarea-output" id="textarea-output"></textarea>
+        <h2>Output code</h2>
+        <div id="code-container">
+            <pre id="textarea-output"></pre>
+        </div>
     </div>
 
 </div>
