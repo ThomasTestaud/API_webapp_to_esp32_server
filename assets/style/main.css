@@ -1,0 +1,32 @@
+/**************PAGE***************/
+
+body {
+    font-family: sans-serif;
+    font-size: 20px;
+    position: relative;
+    background-color: #edf2f4;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 1080px;
+    margin: auto;
+    display: flex;
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form *+* {
+    margin-top: 0.5em;
+}
+
+textarea {
+    height: 500px;
+    width: 400px;
+}
