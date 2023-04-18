@@ -112,11 +112,18 @@ footer a:hover {
     
     .container > * + * {
         margin-top: 20px;
+        margin-left: 0px;
+    }
+    h1 {
+        font-size: 30px;
     }
 }
 
 @media screen and (max-width: 700px) {
     .container {
         width: 95%;
+    }
+    h1 {
+        font-size: 15px;
     }
 }
