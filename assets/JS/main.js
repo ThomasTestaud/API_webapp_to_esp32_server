@@ -1,4 +1,4 @@
-
+///////////AJAX CONVERT//////////////
 let convertBtn = document.querySelector('#convert-btn');
 let codeInput = document.querySelector('#textarea-input');
 let codeOutput = document.querySelector('#textarea-output');
@@ -15,3 +15,13 @@ convertBtn.addEventListener('click', function () {
             codeOutput.innerHTML = res;
         })
 });
+//////////TOOLBAR INPUT///////////
+let btnCopyClip = document.querySelector('#copyClip');
+btnCopyClip.onclick = function () {
+    let textBox = document.getElementById("textarea-input");
+    let text = textBox.textContent;
+    alert("Copied the text: " + text);
+}
+
+
+//////////TOOLBAR OUTPUT///////////
