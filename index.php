@@ -25,18 +25,20 @@ if (array_key_exists('route', $_GET)) {
 
             //Escape double quotes
             $code = str_replace('"', '\\"', $data['codeToConvert']);
-
+            /*
             //Delete new lines
             $code = str_replace("\n", "", $code);
 
             //Remove extra spaces
             $code = trim(preg_replace('/\s+/', ' ', $code));
-            $code = htmlspecialchars($code);
 
+            //Convert to array
             $code = str_split($code, 200);
+            */
+            $code = explode("\n", $code);
 
             foreach ($code as $print) {
-                echo 'client.println("' . $print . '");<br>';
+                echo 'client.println("' . htmlspecialchars($print) . '");<br>';
             }
 
             break;
